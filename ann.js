@@ -2,6 +2,8 @@ import {MnistData} from './data.js';
 import {TensorLord} from './tensor.js' ;
 const TL = new TensorLord ; 
 const inputdims = [28,28,1] ; 
+const NUM_OUTPUT_CLASSES = 10;  // number of outputs 
+tf.setBackend('webgl');
 function getModel() {
 const model = tf.sequential();
 model.add(tf.layers.dense({inputShape: inputdims , units: 32, activation: 'relu'})); //  Input Layer

@@ -2,8 +2,8 @@ import {MnistData} from './data.js';
 import {TensorLord} from './tensor.js' ;
 const TL = new TensorLord ; 
 const inputdims = [28,28,1] ; 
+tf.setBackend('webgl');
 function getModel() {
-    
     const model = tf.sequential(); 
     model.add(tf.layers.conv2d({
       inputShape: inputdims,

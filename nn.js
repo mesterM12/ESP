@@ -3,6 +3,7 @@ import {TensorLord} from './tensor.js' ; // load the custom TensorFlow controlle
 const TL = new TensorLord ; // new Tensor Lord
 const inputdims = [28,28,1] ; // Dimensions of the input pictures 
 const NUM_OUTPUT_CLASSES = 10;  // number of outputs 
+tf.setBackend('cpu');
 function getModel() {
 const model = tf.sequential(); 
 model.add(tf.layers.dense({inputShape: inputdims , units: 32, activation: 'relu'})); //  Input Layer
